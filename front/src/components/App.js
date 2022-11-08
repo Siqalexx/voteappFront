@@ -1,17 +1,16 @@
 import "./App.css";
-import Autorization from "./Autorization/Autorization";
+import Layout from "./Layout/Layout";
 import Question from "./Question/Question";
 
 function App() {
-	return (
-		<>
-			<Question
-				questionTitle={"React - Это?"}
-				options={["dsa", "qwe", "iop"]}
-			></Question>
-			<Autorization></Autorization>
-		</>
-	);
+    return (
+        <Layout>
+            <Question
+                questionTitle="Реакт это?"
+                options={["Библиотека", "Фреймворк", "Фреймворк"]}
+            />
+        </Layout>
+    );
 }
 
 export default App;
