@@ -1,0 +1,35 @@
+.menu {
+	font-family: "Inter", sans-serif;
+	width: 100%;
+	max-width: 600px;
+	padding: 3rem;
+	margin: 0 auto auto auto;
+
+	.inputButton {
+		font-family: "Montserrat", sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+	}
+	.buttonTest {
+		font-family: "Montserrat", sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+	}
+	.buttonTest:hover {
+		background-color: #1e1e1e;
+		color: white;
+	}
+}
+.testPlaces {
+	margin-top: 6px;
+	border-radius: 16px;
+	padding: 16px;
+	width: 100%;
+	background-color: #f5f5f5;
+}
+.menu__title {
+	font-size: 32px;
+	font-weight: 600;
+	margin: 0 0 15px 0;
+	color: #1e1e1e;
+}
