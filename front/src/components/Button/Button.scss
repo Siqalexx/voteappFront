@@ -1,42 +1,50 @@
 .buttonTest {
-	background: none;
-	display: flex;
-	border: 1px solid #d9d9d9;
-	border-radius: 8px;
-	width: 100%;
-	padding: 16px 24px;
-	font-size: 1rem;
-	font-family: "Montserrat", sans-serif;
-	font-weight: bold;
-	font-size: 12px;
-	margin: 0;
+    background: none;
+    display: flex;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    cursor: pointer;
 }
 .buttonPlaces {
-	display: flex;
-	flex-direction: column;
-	max-width: 100%;
-	margin: 0 auto;
-	row-gap: 16px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    row-gap: 16px;
 }
 .button_autorization {
-	padding: 12px 24px;
-	border: none;
-	background-color: #4568dc;
-	color: white;
-	font-weight: bold;
-	font-size: 0.75rem;
-	margin-top: 12px;
-	justify-content: center;
+    padding: 12px 24px;
+    border: none;
+    background-color: #4568dc;
+    font-weight: bold;
+    font-size: 0.75rem;
+    margin-top: 12px;
+    justify-content: center;
+    color: white !important;
+    font-size: 14px !important;
+    &:hover {
+        background: rgb(58, 58, 58);
+    }
+    font-family: "Montserrat", sans-serif;
 }
 .button_create-variant {
-	background: none;
-	border: none;
-	text-decoration: underline;
-	padding: 0;
-	font-family: "Inter", sans-serif;
-	font-weight: 400;
-	font-size: 16px;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 0.25rem;
+    margin-left: 0.25rem;
 }
 .create-test {
-	background-color: tomato;
+    background-color: tomato;
 }

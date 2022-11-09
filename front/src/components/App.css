@@ -1,3 +1,10 @@
 a {
-	text-decoration: none;
+  text-decoration: none;
+}
+
+.error {
+  color: tomato;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0.25rem 0;
 }
