@@ -11,6 +11,7 @@ import CreatePoll from "./CreatePoll/CreatePoll";
 import Menu from "./Menu/Menu";
 import NameTest from "./NameTest/NameTest";
 import TestCard from "./TestCard/TestCard";
+import Test from "./Test/Test";
 
 function App() {
     return (
@@ -19,23 +20,11 @@ function App() {
                 <Routes>
                     <Route path="/login" element={<Auth />} />
                     <Route path="/" element={<Menu />} />
-                    <Route
-                        path="/test"
-                        element={
-                            <Question
-                                questionTitle="Реакт это?"
-                                options={[
-                                    "Библиотека",
-                                    "Фреймворк",
-                                    "Фреймвор0к",
-                                ]}
-                            />
-                        }
-                    />
                     <Route path="test">
                         <Route path="create" element={<NameTest />} />
                         <Route path="create/:name" element={<CreatePoll />} />
                         <Route path=":id" element={<TestCard />} />
+                        <Route path=":id/run" element={<Test />} />
                     </Route>
                 </Routes>
             </AuthContext>

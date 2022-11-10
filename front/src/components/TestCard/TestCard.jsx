@@ -32,9 +32,11 @@ export default function TestCard() {
                 Всего вопросов: {poll.questions.length}
             </div>
             <div className="test__param">Рейтинг теста: {poll.rating}</div>
-            <Button ButtonType="button_autorization test__btn">
-                Пройти тест
-            </Button>
+            <Link to={`/test/${id}/run`}>
+                <Button ButtonType="button_autorization test__btn">
+                    Пройти тест
+                </Button>
+            </Link>
             <Link to="/">
                 <Button ButtonType="button_autorization">Назад</Button>
             </Link>

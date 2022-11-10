@@ -5,6 +5,10 @@
     padding: 3rem;
     margin: 0 auto auto auto;
 
+    .menu__more {
+        all: unset;
+    }
+
     .inputButton {
         font-weight: 500;
         font-family: "Inter", sans-serif;
@@ -17,6 +21,14 @@
         background-color: #1e1e1e;
         color: white;
     }
+    .menu__more {
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 14px;
+    }
+}
+.test-places-wrapper {
+    margin: 0 4px;
 }
 .testPlaces {
     margin-top: 6px;
@@ -27,6 +39,9 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    max-height: 450px;
+    overflow-y: auto;
+
     .buttonTest {
         font-family: "Inter", sans-serif;
         font-weight: 500;
@@ -39,4 +54,22 @@
     font-weight: 600;
     margin: 0 0 15px 0;
     color: #1e1e1e;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+*::-webkit-scrollbar-track {
+    background: #d6d6d6;
+    border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(70, 70, 70);
+    border-radius: 20px;
+    border: 2px solid rgb(70, 70, 70);
 }

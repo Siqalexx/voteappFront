@@ -24,6 +24,8 @@ class PollService {
 
     async createPoll({ pollTitle, questions }) {
         const headers = new Headers();
+        const token = localStorage.getItem("token");
+        headers.append("Authorization", `Bearer ${token}`);
         headers.append("content-type", "application/json");
 
         const request = fetch("/poll", {
@@ -36,7 +38,7 @@ class PollService {
     }
 
     async getPoll(id) {
-        const token = localStorage.getItem("user");
+        const token = localStorage.getItem("token");
         const headers = new Headers();
         headers.append("Authorization", `Bearer ${token}`);
         headers.append("Content-Type", "application/json");
@@ -50,7 +52,7 @@ class PollService {
     }
 
     async getPolls({ limit, offset } = {}) {
-        const token = localStorage.getItem("user");
+        const token = localStorage.getItem("token");
         const headers = new Headers();
         headers.append("Authorization", `Bearer ${token}`);
         headers.append("Content-Type", "application/json");
@@ -66,6 +68,41 @@ class PollService {
         }
 
         const request = fetch("/poll?" + params, {
+            method: "GET",
+            headers,
+        });
+
+        return (await request).json();
+    }
+
+    async vote(id, body) {
+        const token = localStorage.getItem("token");
+        const headers = new Headers();
+        headers.append("Authorization", `Bearer ${token}`);
+        headers.append("Content-Type", "application/json");
+
+        console.log(token);
+
+        const request = fetch(`/poll/${id}/vote`, {
+            method: "POST",
+            headers,
+            body: JSON.stringify(body),
+        });
+
+        return (await request).json();
+    }
+
+    async searchPoll(query) {
+        const token = localStorage.getItem("token");
+        const headers = new Headers();
+        headers.append("Authorization", `Bearer ${token}`);
+        headers.append("Content-Type", "application/json");
+        const params = new URLSearchParams();
+        if (query) {
+            params.append("query", query);
+        }
+
+        const request = fetch(`/poll?${params}`, {
             method: "GET",
             headers,
         });
